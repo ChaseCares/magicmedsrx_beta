@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Institutional</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="styles/style.modern.css">
+</head>
+<body>
+  <header class="header">
+    <div class="logo">
+      <img src="logo.png" alt="Logo">
+    </div>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="institution.html">Institutional</a>
+      <a href="medicare.html">Medicare</a>
+      <a href="medicaid.html">Medicaid</a>
+      <a href="va.html">VA</a>
+      <a href="about.html">About</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h1>Institutional Programs</h1>
+      <p>Programs are grouped by manufacturer. Select a program to view medications and access application links.</p>
+
+      <div class="search-bar">
+        <input id="search" type="search" placeholder="Search manufacturer or medication..." aria-label="Search">
+      </div>
+    </section>
+
+    <section id="programs-list">
+
+      <!-- ✅ SAMPLE PROGRAM CARD – copy/duplicate this pattern for your real data -->
+      <div class="program-card">
+        <div class="program-header">
+          <div>
+            <h3>Example Pharma — Patient Assistance Program</h3>
+            <div class="program-meta">Type: PAP • Eligibility: Uninsured or income-based</div>
+          </div>
+          <div>
+            <a class="apply-btn" href="#" target="_blank">Apply</a>
+          </div>
+        </div>
+        <div class="drug-list">
+          <ul>
+            <li>Medication A</li>
+            <li>Medication B</li>
+            <li>Medication C</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- ✅ END SAMPLE CARD -->
+
+    </section>
+  </main>
+
+  <footer class="footer">
+    © 2025 Your Organization. All rights reserved.
+  </footer>
+
+<script>
+document.getElementById('search').addEventListener('input', function(e) {
+  const q = e.target.value.toLowerCase();
+  const cards = document.querySelectorAll('.program-card');
+  cards.forEach(card => {
+    const text = card.innerText.toLowerCase();
+    card.style.display = text.includes(q) ? '' : 'none';
+  });
+});
+</script>
+
+</body>
+</html>
