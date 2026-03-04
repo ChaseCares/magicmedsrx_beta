@@ -3,112 +3,16 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- Only increment the last digit -->
+		<link rel="stylesheet" href="./styles/stylesheet.css?v=0.5.0" />
 		<title>Partners | M.A.G.I.C. Meds Rx</title>
-		<link rel="stylesheet" href="styles.css" />
-
-		<style>
-			/* Global Styles */
-			body {
-				margin: 0;
-				font-family: 'Georgia', serif;
-				background-color: #f9f3ea;
-				color: #0d3d3f;
-			}
-
-			/* Navbar */
-			nav {
-				background-color: #f9f3ea;
-				box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-				text-align: center;
-				padding: 20px 0;
-				position: sticky;
-				top: 0;
-				z-index: 10;
-			}
-
-			nav a {
-				color: #0d3d3f;
-				text-decoration: none;
-				font-weight: 700;
-				margin: 0 20px;
-				font-size: 1.1rem;
-				transition: color 0.3s ease;
-			}
-
-			nav a:hover,
-			nav a.active {
-				color: #00676b;
-			}
-
-			/* Partners Section */
-			.partners-section {
-				background-color: #00676b;
-				color: #f9f3ea;
-				text-align: center;
-				padding: 100px 20px;
-				box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
-			}
-
-			.partners-section img {
-				width: 250px;
-				height: auto;
-				border-radius: 14px;
-				margin-bottom: 30px;
-				box-shadow: 0 5px 14px rgba(0, 0, 0, 0.3);
-			}
-
-			.partners-section h1 {
-				font-size: 2.8rem;
-				margin-bottom: 25px;
-				text-shadow: 2px 3px 5px rgba(0, 0, 0, 0.35);
-			}
-
-			.partners-section p {
-				font-size: 1.2rem;
-				line-height: 1.9;
-				max-width: 900px;
-				margin: 0 auto;
-				color: #f9f3ea;
-			}
-
-			/* Footer */
-			footer {
-				background-color: #f9f3ea;
-				color: #0d3d3f;
-				text-align: center;
-				padding: 25px;
-				font-size: 0.9rem;
-				border-top: 2px solid #00676b;
-				margin-top: 60px;
-			}
-
-			footer a {
-				color: #00676b;
-				text-decoration: none;
-				font-weight: bold;
-			}
-
-			footer a:hover {
-				text-decoration: underline;
-			}
-		</style>
 	</head>
 
 	<body>
-		<!-- Navbar -->
-		<nav>
-			<a href="index.html">Home</a>
-			<a href="institutional.html">Institutional</a>
-			<a href="medicare.html">Medicare</a>
-			<a href="medicaid.html">Medicaid</a>
-			<a href="va.html">VA</a>
-			<a href="about.html">About</a>
-			<a href="partners.html" class="active">Partners</a>
-		</nav>
+		<header id="site-header" class="site-header"></header>
 
-		<!-- Partners Section -->
 		<section class="partners-section">
-			<img src="img/restored_image.jpeg" alt="Restored Image community outreach" />
+			<img src="img/restored_image.jpeg.webp" alt="Restored Image community outreach" />
 			<h1>Partners</h1>
 			<p>
 				50% of all proceeds of M.A.G.I.C. Meds goes towards Restored Image to assist our local
@@ -139,11 +43,15 @@
 			<strong>Helping others, helps us all. ❤️✝️</strong>
 		</section>
 
-		<!-- Footer -->
-		<footer>
-			© 2025 M.A.G.I.C. Meds Rx™ |
-			<a href="partners.html">Partner with Us</a>
-			| All Rights Reserved
-		</footer>
+		<footer id="footerContainer"></footer>
+
+		<!-- Only increment the last digit -->
+		<script
+			src="./js/include.js?v=0.1.2"
+			onload="
+				mkNavBar();
+				mkFooter();
+			"
+		></script>
 	</body>
 </html>

@@ -88,7 +88,7 @@ function validateCredentials() {
 function isMobile() {
 	if (
 		/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(
-			navigator.userAgent
+			navigator.userAgent,
 		)
 	) {
 		return true;
@@ -106,38 +106,29 @@ function hideElement(element) {
 }
 
 function mkNavBar() {
-	const navbar = document.getElementById('navContainer');
+	const header = document.getElementById('site-header');
+	const navbar = document.createElement('nav');
+	const ul = document.createElement('ul');
 
 	const scope = window.location.pathname.split('/').pop().split('.')[0];
 
 	const links = [
-		{ href: '/', text: 'HOME' },
-		{ href: '/about.html', text: 'ABOUT' },
-		{ href: '/institution.html', text: 'INSTITUTIONS' },
-		{
-			href: '/pdf/viewer.html?file=' + 'patient/' + PATIENT_PDF_NAME,
-			text: 'PATIENTS',
-			mobile_href: './pdf/patient/' + PATIENT_PDF_NAME + '#toolbar=0',
-		},
-
-		{ href: '/register.html', text: 'REGISTER' },
-		{ href: '/medicare.html', text: 'MEDICARE' },
-		{ href: '/medicaid.html', text: 'MEDICAID' },
+		{ href: '/', text: 'Home' },
+		{ href: '/institution.html', text: 'Institutional' },
+		{ href: '/medicare.html', text: 'Medicare' },
+		{ href: '/medicaid.html', text: 'Medicaid' },
 		{ href: '/va.html', text: 'VA' },
-
-		{
-			href: 'https://youtu.be/fY1GZmP2tQY',
-			text: 'TRAINING',
-			target: '_blank',
-			scoped_to: 'institution',
-		},
+		{ href: '/about.html', text: 'About' },
+		{ href: '/partners.html', text: 'Partners' },
+		{ href: '/uniteus.html', text: 'UniteUs' },
+		{ href: '/goodrx.html', text: 'GoodRx & CostPlusDrugs' },
 	];
 
 	links.forEach((link) => {
 		if (link.scoped_to && link.scoped_to !== scope) {
 			return;
 		}
-
+		const li = document.createElement('li');
 		const a = document.createElement('a');
 
 		if (isMobile() && link.mobile_href) {
@@ -151,22 +142,32 @@ function mkNavBar() {
 		}
 
 		a.innerHTML = link.text;
-		navbar.appendChild(a);
+		li.appendChild(a);
+		ul.appendChild(li);
 	});
+
+	navbar.appendChild(ul);
+	header.appendChild(navbar);
+	ul.setAttribute('class', 'nav-links');
+	navbar.setAttribute('class', 'navbar');
 }
 
 function mkFooter() {
 	const footer = document.getElementById('footerContainer');
 
-	footer.appendChild(document.createElement('hr'));
+	// footer.appendChild(document.createElement('hr'));
+
+	const rights = document.createElement('p');
+	rights.textContent = '© 2025 M.A.G.I.C. Meds Rx. All rights reserved.';
+	footer.appendChild(rights);
 
 	const furtherQuestions = document.createElement('p');
-	furtherQuestions.textContent = 'Further Questions?';
+	furtherQuestions.textContent = 'Email questions and demo requests to:';
 	footer.appendChild(furtherQuestions);
 
 	const address = document.createElement('address');
 	address.innerHTML = `
-		<div><strong>Email:</strong> <a href="mailto:MagicMedsRx@gmail.com" target="_top">MagicMedsRx@gmail.com</a></div>
+		<div><a href="mailto:MagicMedsRx@gmail.com" target="_top">MagicMedsRx@gmail.com</a></div>
 	`;
 	footer.appendChild(address);
 
@@ -213,9 +214,9 @@ function fillMedicareLinks() {
 	links = [
 		{ id: 'fl_medicarePartD', dir: 'medicare', pdf: FL_MEDICARE_PART_D },
 		{ id: 'fl_medicareAdvantage', dir: 'medicare', pdf: FL_MEDICARE_ADVANTAGE },
-		{ id: 'medicareextrahelp', dir: 'medicare', pdf:medicareextrahelp },
-		{ id: 'pdppreview', dir: 'medicare', pdf:pdppreview },
-		{ id: 'mapdpreview', dir: 'medicare', pdf:mapdpreview },
+		{ id: 'medicareextrahelp', dir: 'medicare', pdf: medicareextrahelp },
+		{ id: 'pdppreview', dir: 'medicare', pdf: pdppreview },
+		{ id: 'mapdpreview', dir: 'medicare', pdf: mapdpreview },
 	];
 	links.forEach((link) => {
 		const element = document.getElementById(link.id);

@@ -7,30 +7,16 @@
 		<meta name="author" content="Kyle Ames" />
 		<meta name="description" content="About M.A.G.I.C. Meds Rx" />
 		<link href="./img/favicon.ico" rel="icon" type="image/x-icon" />
-		<link rel="stylesheet" href="./styles/style.modern.css" />
-		<title>About | M.A.G.I.C. Meds Rx™</title>
+		<!-- Only increment the last digit -->
+		<link rel="stylesheet" href="./styles/stylesheet.css?v=0.5.0" />
+		<title>About M.A.G.I.C. Meds Rx™</title>
 	</head>
 
 	<body>
-		<!-- ===== HEADER ===== -->
-		<header class="site-header">
-			<nav class="navbar">
-				<ul class="nav-links">
-					<li><a href="index.html">Home</a></li>
-					<li><a href="institution.html">Institutional</a></li>
-					<li><a href="medicare.html">Medicare</a></li>
-					<li><a href="medicaid.html">Medicaid</a></li>
-					<li><a href="va.html">VA</a></li>
-					<li><a href="about.html" class="active">About</a></li>
-					<li><a href="partners.html">Partners</a></li>
-				</ul>
-			</nav>
-		</header>
-		<!-- ===========================
-			ABOUT SECTION
-		=========================== -->
+		<header id="site-header" class="site-header"></header>
+
 		<section class="about-section">
-			<img src="./img/MAGIC_logo_cream.svg" alt="M.A.G.I.C. Meds Logo" class="about-logo" />
+			<img src="./img/magic_logo_cream.svg" alt="MAGIC Meds Logo" class="about-logo" />
 			<h1 class="about-title">About M.A.G.I.C. Meds Rx™</h1>
 			<p class="about-subtitle">
 				Medication Assistance Guide for Improving Care — helping patients access life-saving brand
@@ -38,9 +24,6 @@
 			</p>
 		</section>
 
-		<!-- ===========================
-			MAIN ABOUT CONTENT
-		=========================== -->
 		<section class="about-content">
 			<div>
 				<h1>History</h1>
@@ -63,7 +46,7 @@
 				<h1>Why We Care</h1>
 				<img
 					src="./img/businessprofessional.resize_400x600.jpg"
-					alt="Kyle Ames, clinical pharmacist and creator of M.A.G.I.C. Meds Rx"
+					alt="Kyle Ames, clinical pharmacist and creator of MAGIC Meds Rx"
 				/>
 				<p>
 					I am a practicing clinical pharmacist passionate about helping patients access the best
@@ -113,5 +96,16 @@
 				</p>
 			</div>
 		</section>
+
+		<footer id="footerContainer"></footer>
+
+		<!-- Only increment the last digit -->
+		<script
+			src="./js/include.js?v=0.1.2"
+			onload="
+				mkNavBar();
+				mkFooter();
+			"
+		></script>
 	</body>
 </html>
