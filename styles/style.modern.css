@@ -3,61 +3,61 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-  }
-  
-  /* ===== GLOBAL ===== */
-  body {
-	font-family: "Georgia", serif;
+}
+
+/* ===== GLOBAL ===== */
+body {
+	font-family: 'Georgia', serif;
 	background-color: #f9ede2;
 	color: #003f42;
 	line-height: 1.6;
-  }
-  
-  /* ===== NAVBAR ===== */
-  .site-header {
+}
+
+/* ===== NAVBAR ===== */
+.site-header {
 	background-color: #f9ede2;
 	border-bottom: 1px solid #ddd;
 	padding: 1rem 0;
-  }
-  
-  .nav-links {
+}
+
+.nav-links {
 	display: flex;
 	justify-content: center;
 	gap: 2.5rem;
 	list-style: none;
-  }
-  
-  .nav-links a {
+}
+
+.nav-links a {
 	text-decoration: none;
 	font-size: 1.2rem;
 	color: #003f42;
 	font-weight: 600;
 	transition: color 0.3s;
-  }
-  
-  .nav-links a:hover {
+}
+
+.nav-links a:hover {
 	color: #008b8f;
-  }
-  
-  /* ===== HERO SECTION ===== */
-  .hero {
+}
+
+/* ===== HERO SECTION ===== */
+.hero {
 	background-color: #00676b;
 	text-align: center;
 	padding: 5rem 1rem 6rem 1rem;
 	color: #f9ede2;
-  }
-  
-  .hero-content {
+}
+
+.hero-content {
 	max-width: 800px;
 	margin: 0 auto;
-  }
-  .hero-logo {
+}
+.hero-logo {
 	width: 500px; /* enlarged by ~50% */
 	max-width: 60vw;
 	height: auto;
 	margin-bottom: 1.5rem;
-	  }
-  
+}
+
 .hero-text {
 	font-size: 1.3rem;
 	font-weight: 500;
@@ -66,84 +66,86 @@
 	white-space: nowrap; /* ✅ Prevents text from wrapping to a new line */
 	overflow: hidden;
 	text-overflow: ellipsis;
-	}
-	  
-  .hero-buttons {
+}
+
+.hero-buttons {
 	display: flex;
 	justify-content: center;
 	gap: 1.5rem;
-  }
-  
-  .btn {
+}
+
+.btn {
 	text-decoration: none;
 	font-size: 1.1rem;
 	font-weight: 600;
 	border-radius: 30px;
 	padding: 0.8rem 1.8rem;
 	transition: all 0.3s;
-  }
-  
-  .btn.primary {
+}
+
+.btn.primary {
 	background-color: #f9ede2;
 	color: #00676b;
-  }
-  
-  .btn.primary:hover {
+}
+
+.btn.primary:hover {
 	background-color: #f6dfcb;
-  }
-  
-  .btn.secondary {
+}
+
+.btn.secondary {
 	border: 2px solid #f9ede2;
 	color: #f9ede2;
-  }
-  
-  .btn.secondary:hover {
+}
+
+.btn.secondary:hover {
 	background-color: #f9ede2;
 	color: #00676b;
-  }
-  
-  /* ===== CARDS SECTION ===== */
-  .cards-section {
+}
+
+/* ===== CARDS SECTION ===== */
+.cards-section {
 	background-color: #f9ede2;
 	padding: 2.5rem 1rem;
 	display: flex;
 	justify-content: center;
-  }
-  
-  .cards-container {
+}
+
+.cards-container {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
 	gap: 2rem;
 	max-width: 1000px;
-  }
-  
-  .card {
+}
+
+.card {
 	background-color: #ffffff;
 	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 	border-radius: 12px;
 	width: 280px;
 	text-align: center;
 	padding: 2rem;
-	transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  .card:hover {
+	transition:
+		transform 0.3s ease,
+		box-shadow 0.3s ease;
+}
+
+.card:hover {
 	transform: translateY(-6px);
 	box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
-  }
-  
-  .card h3 {
+}
+
+.card h3 {
 	color: #00676b;
 	margin-bottom: 1rem;
-  }
-  
-  .card p {
+}
+
+.card p {
 	color: #003f42;
 	margin-bottom: 1.5rem;
-  }
-  
-  .card a {
+}
+
+.card a {
 	color: #00676b;
 	font-weight: 600;
 	text-decoration: none;
@@ -151,63 +153,63 @@
 	padding: 0.4rem 1rem;
 	border-radius: 20px;
 	transition: all 0.3s;
-  }
-  
-  .card a:hover {
+}
+
+.card a:hover {
 	background-color: #00676b;
 	color: #fff;
-  }
+}
 /* ===== ABOUT SECTION (Teal Background) ===== */
 .about-magic {
 	background-color: #005f60; /* teal */
 	color: #f7efe5; /* cream text */
 	padding: 40px 20px;
 	text-align: left;
-  
+
 	/* ✨ Optional visual polish */
 	border-radius: 12px; /* smooth rounded corners */
 	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* soft drop shadow */
-  }
-  
-  .about-container {
+}
+
+.about-container {
 	max-width: 850px;
 	margin: 0 auto;
-  }
-  
-  .about-magic h2 {
+}
+
+.about-magic h2 {
 	font-size: 2rem;
 	color: #f7efe5; /* heading in cream */
 	margin-bottom: 1rem;
 	text-align: center;
 	font-weight: 700;
-  }
-  
-  .about-magic p {
+}
+
+.about-magic p {
 	font-size: 1.05rem;
 	color: #f7efe5;
 	line-height: 1.6;
 	margin-bottom: 0.8rem;
-  }
-  
-  .about-magic strong {
+}
+
+.about-magic strong {
 	color: #ffecc8; /* lighter cream for emphasis */
 	font-weight: 600;
-  }  
-  /* ===== Medication Logos Section (fixed layout) ===== */
+}
+/* ===== Medication Logos Section (fixed layout) ===== */
 .medication-logos {
 	background-color: #f8efe4;
 	padding: 3rem 1rem;
 	text-align: center;
-  }
-  
-  .medication-logos h2 {
+}
+
+.medication-logos h2 {
 	color: #004f52;
 	font-size: 2rem;
 	font-weight: 700;
 	margin-bottom: 2rem;
-  }
-  
-  .logo-grid {
+}
+
+.logo-grid {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
 	gap: 1.5rem;
@@ -215,9 +217,9 @@
 	align-items: center;
 	max-width: 1100px;
 	margin: 0 auto;
-  }
-  
-  .logo-grid img {
+}
+
+.logo-grid img {
 	background-color: #fff;
 	border-radius: 10px;
 	padding: 0.75rem;
@@ -225,102 +227,103 @@
 	height: 120px; /* Fixed uniform card height */
 	object-fit: contain; /* Keeps proportions */
 	box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
-	transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  .logo-grid img:hover {
+	transition:
+		transform 0.3s ease,
+		box-shadow 0.3s ease;
+}
+
+.logo-grid img:hover {
 	transform: translateY(-5px);
 	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
-  }  
-  /* ===== FOOTER ===== */
-  footer {
+}
+/* ===== FOOTER ===== */
+footer {
 	text-align: center;
 	padding: 2rem 1rem;
 	background-color: #f9ede2;
 	border-top: 1px solid #ddd;
 	color: #003f42;
 	font-size: 0.95rem;
-  }
+}
 /* =======================================
    ABOUT PAGE — HERO SECTION
    ======================================= */
 /* === ABOUT PAGE STYLES === */
 .about-section {
 	background-color: #00676b; /* teal background */
-	color: #f8f0e3;                /* cream text */
+	color: #f8f0e3; /* cream text */
 	text-align: center;
-	padding: 80px 20px 60px 20px;  /* balanced spacing */
+	padding: 80px 20px 60px 20px; /* balanced spacing */
 	margin: 0;
 	position: relative;
-  }
-  
-  /* Center and enlarge your about-page logo */
-  .about-logo {
+}
+
+/* Center and enlarge your about-page logo */
+.about-logo {
 	display: block;
-	margin: 0 auto 30px auto;      /* centers horizontally and adds bottom space */
-	width: 400px;                  /* adjust to taste */
-	max-width: 90%;                /* responsive on smaller screens */
+	margin: 0 auto 30px auto; /* centers horizontally and adds bottom space */
+	width: 400px; /* adjust to taste */
+	max-width: 90%; /* responsive on smaller screens */
 	height: auto;
-	filter: drop-shadow(0 6px 12px rgba(0,0,0,0.25));
-  }
-  
-  /* Main title */
-  .about-title {
+	filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.25));
+}
+
+/* Main title */
+.about-title {
 	font-size: 3.2rem;
 	font-weight: 700;
 	margin-bottom: 16px;
 	text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.35);
-  }
-  
-  /* Subtitle text */
-  .about-subtitle {
+}
+
+/* Subtitle text */
+.about-subtitle {
 	font-size: 1.2rem;
 	max-width: 900px;
 	margin: 0 auto;
 	line-height: 1.6;
 	color: #f9f7f2;
 	opacity: 0.95;
-  }
-  
-  
-  /* Allow wrapping gracefully on smaller screens */
-  @media (max-width: 900px) {
+}
+
+/* Allow wrapping gracefully on smaller screens */
+@media (max-width: 900px) {
 	.about-subtitle {
-	  white-space: normal;
-	  font-size: 1rem;
+		white-space: normal;
+		font-size: 1rem;
 	}
-  }
-  
-  /* =======================================
+}
+
+/* =======================================
 	 ABOUT PAGE — CONTENT SECTIONS
 	 ======================================= */
-  .about-content {
+.about-content {
 	background-color: #f5efe6; /* cream */
 	color: #1f4f59; /* teal */
 	padding: 3rem 2rem;
-  }
-  
-  .about-content h1 {
+}
+
+.about-content h1 {
 	text-align: center;
 	font-size: clamp(1.6rem, 3vw, 2.2rem);
 	color: #1f4f59;
 	margin-bottom: 1rem;
-  }
-  
-  .about-content p {
+}
+
+.about-content p {
 	font-size: 1.05rem;
 	line-height: 1.7;
 	max-width: 900px;
 	margin: 0 auto 2rem auto;
 	text-align: justify;
-  }
-  
-  /* Images inside content */
-  .about-content img {
+}
+
+/* Images inside content */
+.about-content img {
 	max-width: 320px;
 	height: auto;
 	border-radius: 12px;
 	margin: 1rem auto;
 	display: block;
 	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  }  
+}
