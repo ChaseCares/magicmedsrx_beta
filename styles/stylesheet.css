@@ -335,48 +335,27 @@ iframe {
 }
 
 .about-logo {
-	display: block;
 	margin: 0 auto 30px auto;
-	width: 400px;
-	max-width: 90%;
-	height: auto;
-	filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.25));
+	width: 500px;
 }
 
 .about-title {
 	font-size: 3.2rem;
-	font-weight: 700;
-	margin-bottom: 16px;
-	text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.35);
 }
 
 .about-subtitle {
 	font-size: 1.2rem;
 	max-width: 900px;
 	margin: 0 auto;
-	line-height: 1.6;
-	color: var(--backGroundColor);
-	opacity: 0.95;
-}
-
-@media (max-width: 900px) {
-	.about-subtitle {
-		white-space: normal;
-		font-size: 1rem;
-	}
 }
 
 .about-content {
-	background-color: var(--backGroundColor);
-	color: var(--darkBlue);
 	padding: 3rem 2rem;
 }
 
 .about-content h1 {
 	text-align: center;
 	font-size: clamp(1.6rem, 3vw, 2.2rem);
-	color: var(--darkBlue);
-	margin-bottom: 1rem;
 }
 
 .about-content p {
