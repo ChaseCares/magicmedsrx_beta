@@ -83,6 +83,26 @@ nav a.active {
 	color: var(--lightBlue);
 }
 
+.container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: auto;
+	padding: 0 5px;
+	/* width: clamp(100px, calc(100% - 10px), 1000px); */
+	color: #000;
+}
+
+.blueBackground {
+	background-color: var(--darkBlue);
+	color: var(--backGroundColor);
+}
+
+.paddingTopBottom4vh {
+	padding-top: 4vh;
+	padding-bottom: 4vh;
+}
+
 iframe {
 	border: none;
 	width: 100%;
@@ -93,19 +113,25 @@ iframe {
 	color: var(--darkBlue);
 }
 
+.text500 {
+	font-size: var(--fs-500);
+}
+
+.text400 {
+	font-size: var(--fs-400);
+}
+
+.bottomMargin3vh {
+	margin-bottom: 3vh;
+}
+
+.lineWidth19 {
+	line-height: 1.9;
+}
+
 #mapContainer {
 	display: block;
 	text-align: center;
-}
-
-.container {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	margin: auto;
-	padding: 0 5px;
-	width: clamp(100px, calc(100% - 10px), 1000px);
-	color: #000;
 }
 
 #stateName {
@@ -135,12 +161,12 @@ iframe {
 }
 
 .hovered {
-	fill: #279d21;
+	fill: var(--lightBlue);
 	stroke-width: 2;
 }
 
 .active {
-	fill: #94068d;
+	fill: var(--lightBlue);
 	stroke-width: 2;
 }
 
@@ -370,35 +396,6 @@ iframe {
 	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-.partners-section {
-	background-color: var(--darkBlue);
-	color: var(--backGroundColor);
-	text-align: center;
-	padding: 100px 20px;
-	box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
-}
-
-.partners-section img {
-	width: 250px;
-	height: auto;
-	border-radius: 14px;
-	margin-bottom: 30px;
-	box-shadow: 0 5px 14px rgba(0, 0, 0, 0.3);
-}
-
-.partners-section h1 {
-	font-size: 2.8rem;
-	margin-bottom: 25px;
-	text-shadow: 2px 3px 5px rgba(0, 0, 0, 0.35);
-}
-
-.partners-section p {
-	font-size: 1.2rem;
-	line-height: 1.9;
-	margin: 0 auto;
-	color: var(--backGroundColor);
-}
-
 .goodrx,
 .costplus {
 	text-align: center;
@@ -406,13 +403,12 @@ iframe {
 	padding: 0 20px;
 }
 
-/* Logo Images */
 .goodrx img,
 .costplus img {
 	display: block;
 	margin: 0 auto 30px auto;
 	width: 100%;
-	max-width: 520px; /* Controls logo size */
+	max-width: 520px;
 	height: auto;
 	border-radius: 16px;
 	transition: transform 0.25s ease;
@@ -421,13 +417,11 @@ iframe {
 	background-color: #13376c;
 }
 
-/* Subtle professional hover effect */
 .goodrx img:hover,
 .costplus img:hover {
 	transform: scale(1.03);
 }
 
-/* Section Headline Links */
 .goodrx .bigLink,
 .costplus .bigLink {
 	display: inline-block;
@@ -445,7 +439,6 @@ iframe {
 	text-decoration: underline;
 }
 
-/* Section Descriptions */
 .goodrx h3,
 .costplus h3 {
 	max-width: 750px;
@@ -455,7 +448,6 @@ iframe {
 	text-align: left;
 }
 
-/* Ordered Lists */
 .goodrx ol,
 .costplus ol {
 	max-width: 750px;
@@ -465,7 +457,6 @@ iframe {
 	line-height: 1.6;
 }
 
-/* Extra spacing between the two sections */
 .costplus {
 	border-top: 1px solid #d6d6d6;
 	padding-top: 80px;

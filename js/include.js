@@ -158,7 +158,7 @@ function mkFooter() {
 	// footer.appendChild(document.createElement('hr'));
 
 	const rights = document.createElement('p');
-	rights.textContent = '© 2025 M.A.G.I.C. Meds Rx. All rights reserved.';
+	rights.textContent = '© 2022 - 2025 M.A.G.I.C. Meds Rx. All rights reserved.';
 	footer.appendChild(rights);
 
 	const furtherQuestions = document.createElement('p');
