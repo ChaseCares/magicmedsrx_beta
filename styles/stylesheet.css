@@ -29,12 +29,20 @@ body {
 	line-height: 1.6;
 }
 
-nav {
+nav ul {
 	padding: 20px 0;
+	display: flex;
+	justify-content: center;
+	list-style: none;
 }
 
 nav a {
 	margin: 0 20px;
+	text-decoration: none;
+	font-size: 1.2rem;
+	color: var(--darkBlue);
+	font-weight: 600;
+	transition: color 0.3s;
 }
 
 nav a:hover,
@@ -43,44 +51,25 @@ nav a.active {
 }
 
 @media only screen and (max-width: 460px) {
-	nav {
+	nav ul {
 		display: block;
 		position: relative;
 		padding: 10px 0;
+		text-align: center;
 	}
 
 	nav > a,
 	nav > div > a {
-		text-align: center;
 		display: block;
 		width: 50%;
 		margin: 4px auto;
-		border-bottom: 1px solid var(--backGroundColor);
 		font-size: var(--fs-500);
 	}
-
-	nav > a:last-child {
-		border-bottom: none;
-		margin: auto;
-	}
 }
 
-.nav-links {
-	display: flex;
-	justify-content: center;
-	list-style: none;
-}
-
-.nav-links a {
-	text-decoration: none;
-	font-size: 1.2rem;
-	color: var(--darkBlue);
-	font-weight: 600;
-	transition: color 0.3s;
-}
-
-.nav-links a:hover {
-	color: var(--lightBlue);
+svg {
+	width: clamp(400px, 60%, 100%);
+	height: auto;
 }
 
 .container {
@@ -189,7 +178,7 @@ iframe {
 	margin: 0 auto;
 }
 .hero-logo {
-	width: 500px;
+	width: clamp(100px, calc(100% - 10px), 500px);
 }
 
 .hero-text {
@@ -220,6 +209,13 @@ iframe {
 	justify-content: center;
 	display: flex;
 	gap: 2rem;
+}
+
+@media only screen and (max-width: 460px) {
+	.cards-container {
+		flex-direction: column;
+		align-items: center;
+	}
 }
 
 .card {
@@ -285,6 +281,11 @@ iframe {
 	margin-bottom: 0.8rem;
 }
 
+.logo {
+	width: clamp(100px, 100%, 600px);
+	height: clamp(100px, 100%, 600px);
+}
+
 .medication-logos {
 	padding: 3rem 1rem;
 	text-align: center;
@@ -325,6 +326,11 @@ iframe {
 	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
 }
 
+.floridaImage {
+	padding: 10px;
+	border-radius: var(--radius);
+}
+
 .about-section {
 	background-color: var(--darkBlue);
 	color: var(--backGroundColor);
@@ -334,17 +340,7 @@ iframe {
 	position: relative;
 }
 
-.about-logo {
-	margin: 0 auto 30px auto;
-	width: 500px;
-}
-
-.about-title {
-	font-size: 3.2rem;
-}
-
 .about-subtitle {
-	font-size: 1.2rem;
 	max-width: 900px;
 	margin: 0 auto;
 }
